@@ -1,0 +1,502 @@
+$red: rgb(223, 65,39)
+
+// css reset
+/*reset css*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+	box-sizing: border-box
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section
+	display: block
+
+body
+	line-height: 1.2
+
+ol, ul
+	list-style: none
+
+blockquote, q
+	quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+	content: ''
+	content: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+// end of css reset
+
+html, body
+	width: 100%
+
+=sectionDimensions
+	width: 100%
+	min-height: 67vh
+	position: relative
+	background-size: cover
+
+=absolute
+	position: absolute
+	bottom: 0
+	width: 100%
+	
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700,400)
+$font-face: 'Open Sans', sans-serif
+
+body
+	font-family: $font-face
+
+#top-front_trees
+	background: url(../images/top-front_trees.png)
+	height: 240px
+	z-index: 10
+	+absolute
+
+#top-back_trees
+	background-image: url(../images/top-back_trees.png)
+	height: 220px
+	z-index: 9
+	+absolute
+
+#top-snow
+	background-image: url(../images/top-snow.png)
+	height: 100px
+	z-index: 21
+	+absolute
+
+#top-snowflakes
+	background-image: url(../images/top-snowflakes.png)
+	background-size: contain
+	background-repeat: no-repeat
+	width: 100%
+	height: 67vh
+	max-height: 75vh
+	z-index: 20
+	position: absolute
+	top: 0
+	left: 0
+
+.top-santa
+	background-image: url(../images/top-santa.png)
+	background-size: contain
+	background-repeat: no-repeat
+	width: 49%
+	max-width: 320px
+	max-height: 140px
+	height: 120px
+	z-index: 20
+	margin: 0 10%
+
+
+.content
+	position: relative
+	z-index: 90
+	width: 60%
+	margin: 0 auto
+	padding: 10px0 
+
+#top-free
+	color: white
+	line-height: 1.2
+	text-align: center
+	font-family: $font-face
+	font-weight: 300
+	font-size: 0.8em /*0.8*/
+	padding-bottom: 10px
+	h3
+		font-family: $font-face
+		font-weight: 700
+		font-size: 1em !important
+		line-height: 1.2
+		display: inline !important
+		&:first-child
+			line-height: 2.5
+
+#content-left
+	width: 35%
+	display: inline-block
+	margin: 0 7%
+
+#content-right
+	@extend #content-left
+	min-height: 55vh
+	height: auto
+	position: absolute
+	top: 50%
+	transform: translateY(-40%)
+	form
+		padding: 20px 5px
+		width: 100%
+		border: 1px solid red
+		min-height: 43vh
+		background: white
+		border: 7px solid rgba(0, 0, 255, .8)
+		border-radius: 5px
+		text-align: center
+		border-image: repeating-linear-gradient( -45deg, $red, $red 9px, transparent 10px, transparent 19px) 10
+		h1
+			font-size: 1.25em
+			font-family: $font-face
+			font-weight: bold
+			color: $red
+			&:nth-child(2)
+				padding-bottom: 20px
+		input
+			width: 80%
+			border-color: rgb(190,190,190)
+			padding: 5px
+			margin: 5px
+			outline: none
+			border: none
+			border: 1px solid #ccc
+			border-radius: 5px
+		#download
+			width: 85%
+			margin: 20px auto 0
+			&:hover
+				cursor: pointer
+		img
+			width: 100%
+			border-radius: 5
+
+
+#top-logo
+	position: relative
+	left: 6px
+	margin: 0 auto
+	width: 36%
+	height: 36%
+	max-width: 136px
+	max-height: 136px
+	img
+		width: 100%
+		height: 100%
+
+#top-top_border
+	width: 100%
+	height: 48px
+	background-image: url(../images/top-top_border.png)
+	background-size: contain /*contain*/
+	background-position: center
+	background-repeat: no-repeat 
+
+
+#top-bottom_border
+	width: 100%
+	height: 37px
+	background-image: url(../images/top-bottom_border.png)
+	background-size: contain /*contain*/
+	background-position: center
+	background-repeat: no-repeat 
+
+.center-content
+	position: relative
+	z-index: 90
+	width: 60%
+	margin: 0 auto
+	padding: 10px
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	h1,h2
+		color: white
+		font-weight: bold
+		font-family: $font-face
+		font-size: 1.2em
+		text-align: center
+		width: 100%
+
+#center-object
+	height: 55vh
+	width: 80%
+	position: absolute
+	top: 50%
+	img
+		width: 100%
+		height: 100%
+
+
+#bot-snowflakes
+	background-image: url(../images/bot-snowflakes.png)
+	background-size: contain
+	background-repeat: repeat-y
+	width: 100%
+	
+	height: 67vh
+	z-index: 60
+	position: absolute
+	top: 0
+	left: 0
+
+
+// ribbon start
+
+.container 
+	width: 80%
+	max-width: 1000px
+	height: 80px
+	margin: 40px auto 
+	position: relative
+
+
+.one > div 
+	height: 50px
+
+
+.main 
+	background: $red 
+	position: relative
+	display: block
+	width: 90%
+	left: 50%
+	top: 0
+	padding: 5px
+	margin-left: -45%
+	z-index: 10
+	text-align: center
+	line-height: 40px
+	color: white
+
+
+.main > div 
+	border: 1px dashed #fff
+	border-color: rgba(255, 255, 255, 0.5)
+	height: 40px
+
+
+.bk 
+	background: $red
+	position: absolute
+	width: 8%
+	top: 12px
+
+
+.bk.l 
+	left: 0
+
+
+.bk.r 
+	right: 0
+
+
+.skew 
+	position: absolute
+	background: darken($red, 10%)
+	width: 3%
+	top: 6px
+	z-index: 5
+
+
+.skew.l 
+	left: 5%
+	transform: skew(00deg,20deg)
+
+
+.skew.r 
+	right: 5%
+	transform: skew(00deg,-20deg)
+
+
+.bk.l > div 
+	left: -30px
+
+
+.bk.r > div 
+	right: -30px
+
+
+.arrow 
+	height: 25px !important
+	position: absolute
+	z-index: 2
+	width: 0 
+	height: 0 
+
+
+.arrow.top 
+	top: 0px
+	border-top: 0px solid transparent
+	border-bottom: 25px solid transparent 	
+	border-right: 30px solid $red
+
+
+.arrow.bottom 
+	top: 25px
+	border-top: 25px solid transparent
+	border-bottom: 0px solid transparent 	
+	border-right: 30px solid $red 
+
+
+.r .bottom 
+	border-top: 25px solid transparent
+	border-bottom: 0px solid transparent 	
+	border-left: 30px solid $red
+	border-right: none
+
+
+.r .top 
+	border-bottom: 25px solid transparent
+	border-top: 0px solid transparent 	
+	border-left: 30px solid $red 
+	border-right: none
+
+
+@media all and (max-width: 1020px) 
+	.skew.l 
+		left: 5%
+		transform: skew(00deg,25deg)
+  
+
+	.skew.r 
+		right: 5%
+		transform: skew(00deg,-25deg)
+  
+
+
+@media all and (max-width: 680px) 
+	.skew.l 
+		left: 5%
+		transform: skew(00deg,30deg)
+  
+
+	.skew.r 
+		right: 5%
+		transform: skew(00deg,-30deg)
+
+
+@media all and (max-width: 460px) 
+	.skew.l 
+		left: 5%
+		transform: skew(00deg,40deg)
+  
+	.skew.r 
+		right: 5%
+		transform: skew(00deg,-40deg)
+/*end of ribbon*/
+
+
+=bell($color, $dim)
+	border-radius: 100%
+	width: $dim
+	height: $dim
+	background-color: $color
+	margin: 0 .5%
+	display: inline-block
+	padding-top: 20px
+
+
+#bells 
+	width: 120%
+	max-width: calc(100vw - 20px)
+	text-align: center
+	img
+		width: 30%
+		height: 30%
+	h3
+		font-weight: 700
+		font-size: 0.9em
+	p
+		font-size: 0.75em
+		font-weight: 400
+		max-width: 180px
+		word-wrap: break-word
+		margin: 0 auto
+		hyphens: auto
+		padding: 1% 10% 10%
+
+
+#bell-1
+	+bell(white, 180px)
+	top: 170px
+	color: $red
+
+#bell-2
+	+bell($red, 180px)
+	top: 90px
+	color: white
+
+#bell-3
+	+bell(white, 180px)
+	top: 170px
+	color: $red
+
+#bell-4
+	+bell($red, 180px)
+	top: 90px
+	color: white
+
+#section-top
+	+sectionDimensions
+	background-image: url(../images/top-background.png)
+
+#section-center
+	+sectionDimensions
+	background-image: url(../images/center-background.png)
+
+#section-bottom
+	+sectionDimensions	
+	background-image: url(../images/bot-background.png)
+
+
+
+
+
+@media all and (max-width: 320px)
+	body
+		font-size: 100px
+
+@media all and (max-width: 640px)	
+
+	
+	#top-logo
+		left: 3%
+
+	#center-object, .center-content
+		width: 100%
+
+	#top-snowflakes, #bot-snowflakes
+		display: none
+
+	#content-left, #content-right, .top-santa
+		display: block
+		width: 100%
+		margin: 0 auto
+
+	#content-right
+		margin: 40px 0 0
+		position: inherit
+		top: auto
+		transform: translateY(0)
+
+	#ribbon-text-pc
+		font-size: 0.65em
+
+	#bells
+		h3
+			font-size: 0.8em
+		p
+			font-size: 0.6em
